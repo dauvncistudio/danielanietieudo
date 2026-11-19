@@ -1,0 +1,89 @@
+.dau-cursor-enabled,
+.dau-cursor-enabled a,
+.dau-cursor-enabled button,
+.dau-cursor-enabled summary,
+html[data-dau-cursor],
+html[data-dau-cursor] a,
+html[data-dau-cursor] button,
+html[data-dau-cursor] summary { cursor: none; }
+
+.dau-cursor {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s ease, transform .35s cubic-bezier(.22, 1, .36, 1), width .35s cubic-bezier(.22, 1, .36, 1), height .35s cubic-bezier(.22, 1, .36, 1), background .35s ease, border-color .35s ease;
+}
+.dau-cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, .78);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+.dau-cursor-ring.is-hover {
+  width: 60px;
+  height: 60px;
+  border-color: #f0a7ff;
+  background: rgba(220, 135, 255, .1);
+}
+.dau-cursor-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e5a4ff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 18px rgba(229, 164, 255, .8);
+}
+.dau-cursor-dot.is-hover {
+  width: 9px;
+  height: 9px;
+  background: #ff77c8;
+}
+.dau-cursor-label {
+  padding: 7px 9px;
+  color: #fff;
+  background: #0a090c;
+  font: 9px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transform: translate(20px, 16px);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+.dau-cursor-enabled .btn-primary,
+.dau-cursor-enabled .nav-cta,
+html[data-dau-cursor] .btn-primary,
+html[data-dau-cursor] .nav-cta { transition: transform .28s cubic-bezier(.22, 1, .36, 1), background .25s ease, color .25s ease; }
+.dau-cursor-enabled .artwork,
+.dau-cursor-enabled .portrait-frame,
+html[data-dau-cursor] .artwork,
+html[data-dau-cursor] .portrait-frame { transform: perspective(900px) rotateX(var(--cursor-tilt-x, 0deg)) rotateY(var(--cursor-tilt-y, 0deg)); transition: transform .35s cubic-bezier(.22, 1, .36, 1); }
+
+/* Discipline strip motion */
+.discipline > span { display: inline-block; animation: discipline-float 3.8s ease-in-out infinite; will-change: transform; }
+.discipline > span:nth-of-type(2) { animation-delay: -.9s; }
+.discipline > span:nth-of-type(3) { animation-delay: -1.8s; }
+.discipline > span:nth-of-type(4) { animation-delay: -2.7s; }
+@keyframes discipline-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
+.form-status-success, .form-status-error, .form-status-info { display: block; margin-top: 14px; font-size: 13px; line-height: 1.45; }
+.form-status-success { color: #9de4bf; }
+.form-status-error { color: #ffadbd; }
+.form-status-info { color: #c6b5ff; }
+.request-form button[disabled] { cursor: wait; opacity: .65; }
+
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .dau-cursor { display: none; }
+  .dau-cursor-enabled,
+  .dau-cursor-enabled a,
+  .dau-cursor-enabled button,
+  .dau-cursor-enabled summary,
+  html[data-dau-cursor],
+  html[data-dau-cursor] a,
+  html[data-dau-cursor] button,
+  html[data-dau-cursor] summary { cursor: auto; }
+  .discipline > span { animation: none; }
+}
