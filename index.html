@@ -1,1 +1,48 @@
-PLACEHOLDER_FOR_FULL_CONTENT
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Daniel Anietie Udo — Design & Web</title>
+  <meta name="description" content="Daniel Anietie Udo — graphic designer and web developer."/>
+  <meta name="theme-color" content="#09090b"/>
+  <link rel="icon" type="image/jpeg" href="/work/portrait.jpg"/>
+  <link rel="apple-touch-icon" href="/work/portrait.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root { --bg: #09090b; --fg: #fafafa; --muted: #a1a1aa; --accent: #c026d3; --card: #18181b; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--fg); min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; line-height: 1.5; }
+    .wrap { max-width: 520px; text-align: center; }
+    .portrait { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); margin-bottom: 1.75rem; box-shadow: 0 0 0 8px rgba(192, 38, 211, 0.15); }
+    h1 { font-family: "Space Grotesk", sans-serif; font-size: clamp(1.75rem, 5vw, 2.25rem); font-weight: 700; letter-spacing: -0.03em; margin-bottom: 0.5rem; }
+    h1 span { color: var(--accent); }
+    .tag { display: inline-block; font-size: 0.8rem; font-weight: 500; color: var(--accent); background: rgba(192, 38, 211, 0.12); padding: 0.35rem 0.85rem; border-radius: 999px; margin-bottom: 1.5rem; }
+    p { color: var(--muted); margin-bottom: 1.25rem; font-size: 1.05rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 2rem; }
+    a.btn { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.75rem 1.35rem; border-radius: 999px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: transform 0.15s, background 0.15s; }
+    a.btn-primary { background: var(--accent); color: white; }
+    a.btn-primary:hover { transform: translateY(-1px); background: #d946ef; }
+    a.btn-ghost { background: var(--card); color: var(--fg); border: 1px solid #27272a; }
+    a.btn-ghost:hover { background: #27272a; }
+    .note { margin-top: 3rem; font-size: 0.8rem; color: #71717a; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img class="portrait" src="/work/portrait.jpg" alt="Daniel Anietie Udo" width="140" height="140"/>
+    <div class="tag">Temporary page</div>
+    <h1>Heisdanielanietie<span>.</span></h1>
+    <p>The full portfolio is in the repository history under the commit <strong>Add exported grok support assets</strong>.</p>
+    <p>I cannot push the complete 41 KB file through the current tool. Please ask someone with access to reset the main branch to that commit, or contact me again later.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://www.behance.net/heisdanielanietie/" target="_blank" rel="noopener">View work on Behance ↗</a>
+      <a class="btn btn-ghost" href="https://wa.me/2349115860032" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-ghost" href="mailto:heisdanielanietie@gmail.com">Email</a>
+    </div>
+    <p class="note">Daniel Anietie Udo · Graphic Designer & Web Developer · Akwa Ibom, Nigeria</p>
+  </div>
+</body>
+</html>
